@@ -1,0 +1,13 @@
+# Instal Alsa Sound Utilities
+yay -S alsa-utils
+
+# Run alsamixer -> press F6 to select Audio device and disable
+
+#Open your terminal and run alsamixer.
+alsamixer
+
+#Press the F6 key to select your specific sound card.
+#Use the right arrow key to navigate to Auto-Mute Mode.
+
+# Store Alsa settings
+sudo alsactl store
