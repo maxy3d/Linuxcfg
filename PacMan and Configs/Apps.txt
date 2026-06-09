@@ -2,7 +2,7 @@
 #BASIC
 
    sudo pacman -Syu
-   sudo pacman -S fastfetch reflector terminator konsole dolphin sddm-kcm amd-ucode git base-devel nano grep ark unzip kate
+   sudo pacman -S fastfetch reflector terminator konsole kitty dolphin sddm-kcm amd-ucode git base-devel nano grep ark unzip kate
 
    #Run reflector to get closest repositories CO
      sudo reflector --latest 5 --country CO --protocol http,https --sort rate --save /etc/pacman.d/mirrorlist
@@ -15,20 +15,11 @@
 #ULTIMATE BASHRC
    sudo pacman -S bash-completion, neovim, starship, fzf, zoxide, trash, tree
 
-
-
-
-   docker docker-compose
+#OTHER PACKAGES
+   docker docker-compose lact btop
 
 # Thru yay
-# Install yay
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
-
-# update yay
 yay -Syu
-
 
 yay -S topgrade-bin
 yay pipewire

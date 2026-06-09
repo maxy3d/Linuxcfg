@@ -1,0 +1,39 @@
+==== Installing yay ====
+
+git clone https://aur.archlinux.org/yay.git
+
+#or
+
+git clone https://aur.archlinux.org/yay-bin.git
+
+
+cd yay
+makepkg -si
+
+===== How to use yay ====
+
+yay (nothing else) -- Updates repos and system + AUR packages
+
+yay (search terms) -- Searches for packages in the repos and AUR
+(Using the same formatting as pacman -Ss)
+
+yay -S = Sync [package (s)]
+yay -U = Update [package (s)]
+yay -R = Remove [package (s)]
+
+= Same as their pacman equivalents, but with AUR support
+(So for example, yay -S davinci-resolve installs Davinci Resolve from the AUR)
+
+=== Some useful commands: ===
+
+yay -Syu -- Updates the entire system like pacman, but also updates AUR
+yay -c -- Cleans unused packages
+yay -Scc (or) yay -Sc -- Cleans pacman & AUR package caches
+
+yay -Q | grep [text] -- search for installed packages with the [text]
+yay -Ss | grep [text] -- search repositories and AURs packages with the [text]
+
+yay --noconfirm (options) -- Skips all y/n and other checks
+
+yay -G (AUR package) -- Downloads PKGBUILDs for an AUR package
+yay -P --stats -- list useful statistics regarding system packages
