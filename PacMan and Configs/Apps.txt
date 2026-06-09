@@ -16,7 +16,7 @@
    sudo pacman -S bash-completion, neovim, starship, fzf, zoxide, trash, tree
 
 #OTHER PACKAGES
-   docker docker-compose lact btop
+   docker docker-compose lact btop qjackctl
 
 # Thru yay
 yay -Syu
