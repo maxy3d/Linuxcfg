@@ -1,32 +1,83 @@
-
-#BASIC
+###########
+## BASIC ##
+###########
 
    sudo pacman -Syu
    sudo pacman -S fastfetch reflector terminator konsole kitty dolphin sddm-kcm amd-ucode git base-devel nano grep ark unzip kate
 
    #Run reflector to get closest repositories CO
-     sudo reflector --latest 5 --country CO --protocol http,https --sort rate --save /etc/pacman.d/mirrorlist
+    sudo reflector --latest 5 --country CO --protocol http,https --sort rate --save /etc/pacman.d/mirrorlist
 
-
-
-#GAMES
-   sudo pacman -S steam
-
-#ULTIMATE BASHRC
+#####################
+## ULTIMATE BASHRC ## -> Check Q-Lnxcfg U_BASH for more info
+#####################
    sudo pacman -S bash-completion, neovim, starship, fzf, zoxide, trash, tree
 
-#OTHER PACKAGES
-   docker docker-compose lact btop qjackctl
 
-# Thru yay
+###################
+## GAMES & UTILS ##
+###################
+
+  yay -S steam wayvr mangohud mangojuice
+  yay -S lact gamemode lib32-gamemode gamescope
+
+  #ADD USER TO GAMEMODE
+    sudo usermod -aG gamemode $USER
+
+    #Test gamemode
+     gamemoded -t
+
+#ADD LAUNCH OPTION IN STEAM GAMES
+  mangohud gamemoderun %command%
+
+#############
+## FLATPAK ## ALSO AVAILABLE THRU DISCOVERY KDE APP
+#############
+
+
+#eg. INSTALL PROTONUP-QT
+  flatpak install flathub net.davidotek.pupgui2
+
+
+Name                 Application ID                         Version         Branch        Installation
+Brave                com.brave.Browser                      1.91.172        stable        system
+Flatseal             com.github.tchx84.Flatseal             2.4.1           stable        system
+OBS Studio           com.obsproject.Studio                  32.1.2          stable        system
+Cameractrls          hu.irl.cameractrls                     0.6.10          stable        system
+Mango Juice          io.github.radiolamp.mangojuice         0.9.0           stable        system
+WiVRn server         io.github.wivrn.wivrn                  26.6            stable        system
+ProtonUp-Qt          net.davidotek.pupgui2                  2.15.0          stable        system
+Calculator           org.gnome.Calculator                   50.0            stable        system
+
+
+#####################
+## DOCKER PACKAGES ## -> Check Q-Lnxcfg Winboat for more info
+#####################
+   yay -S docker docker-compose
+
+  #ADD USER TO DOCKER
+   sudo usermod -aG docker $USER
+
+
+##############
+## MORE YAY ##
+##############
+
 yay -Syu
-
 yay -S topgrade-bin
-yay pipewire
-yay qjackctl
-yay alsa-utils
-yay luajit
-yay v4l-utils
+yay -S btop
+yay -S pipewire
+yay -S qjackctl
+yay -S alsa-utils
+yay -S luajit
+yay -S v4l-utils
 yay -S github-desktop
 yay -S winboat-bin
 yay -S dropbox
+yay -S anydesk-bin
+yay -S celluloid
+
+#########################
+## INSTALL KDE for X11 ##
+#########################
+sudo pacman -S plasma plasma-x11-session kwin-x11 sddm xorg-server

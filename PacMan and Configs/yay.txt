@@ -28,7 +28,8 @@ yay -R = Remove [package (s)]
 
 yay -Syu -- Updates the entire system like pacman, but also updates AUR
 yay -c -- Cleans unused packages
-yay -Scc (or) yay -Sc -- Cleans pacman & AUR package caches
+yay -Sc -- Removes unneeded dependencies (orphans) from your system (Safe).
+yay -Scc -- Forcefully removes all uninstalled dependencies from your compilation cache (Moderate).
 
 yay -Q | grep [text] -- search for installed packages with the [text]
 yay -Ss | grep [text] -- search repositories and AURs packages with the [text]
