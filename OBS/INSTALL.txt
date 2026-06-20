@@ -1,0 +1,14 @@
+flatpack
+ .....
+
+
+
+
+#For Virtual Camera
+sudo pacman -S v4l2loopback-dkms v4l2loopback-utils base-devel dkms linux-headers
+
+# Reinstall v4l2loopback-dkms
+sudo pacman -S --reinstall v4l2loopback-dkms
+
+# Verify and Load the Module
+sudo modprobe v4l2loopback exclusive_caps=1

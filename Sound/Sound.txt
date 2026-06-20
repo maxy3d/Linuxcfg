@@ -11,3 +11,7 @@ alsamixer
 
 # Store Alsa settings
 sudo alsactl store
+
+# Voicemeeter lnx alternative => pulsemeeter
+
+yay -S pulsemeeter
