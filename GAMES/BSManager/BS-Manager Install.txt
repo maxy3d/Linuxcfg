@@ -1,0 +1,5 @@
+#Install BS Manager
+yay -S bs-manager-bin
+
+#(DepoDowlader not working: Replace with the one from flatpak):
+sudo cp ./DepotDownloader /opt/BSManager/resources/assets/scripts/

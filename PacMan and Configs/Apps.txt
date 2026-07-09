@@ -15,11 +15,17 @@
 
 
 ###################
-## GAMES & UTILS ##
+## GAMES & UTILS ## --> Check GAMES FOLDER
 ###################
 
-  yay -S steam wayvr mangohud mangojuice
-  yay -S lact gamemode lib32-gamemode gamescope
+  pacman -S steam sc-controller wayvr mangohud lib32-mangohud goverlay
+  pacman -S lact gamemode lib32-gamemode gamescope
+  yay -S vkBasalt lib32-vkBasalt
+  flatpak install flathub net.davidotek.pupgui2               #PROTONUP-QT
+  flatpak install flathub io.github.radiolamp.mangojuice      #Mango Juice
+  flatpak install flathub io.github.Faugus.faugus-launcher    #FAUGUST LAUNCHER
+  flatpak install flathub org.freedesktop.Platform.VulkanLayer.MangoHud # Enble Mangohub connection to Faugust in case Magohub is Grayout
+
 
   #ADD USER TO GAMEMODE
     sudo usermod -aG gamemode $USER
@@ -36,19 +42,18 @@
 
 
 #eg. INSTALL PROTONUP-QT
-  flatpak install flathub net.davidotek.pupgui2
+  flatpak install flathub net.davidotek.pupgui2 # Install PROTONUP-QT
 
 
-Name                 Application ID                         Version         Branch        Installation
-Brave                com.brave.Browser                      1.91.172        stable        system
-Flatseal             com.github.tchx84.Flatseal             2.4.1           stable        system
-OBS Studio           com.obsproject.Studio                  32.1.2          stable        system
-Cameractrls          hu.irl.cameractrls                     0.6.10          stable        system
-Mango Juice          io.github.radiolamp.mangojuice         0.9.0           stable        system
-WiVRn server         io.github.wivrn.wivrn                  26.6            stable        system
-ProtonUp-Qt          net.davidotek.pupgui2                  2.15.0          stable        system
-Calculator           org.gnome.Calculator                   50.0            stable        system
-
+Name                 Application ID
+Brave                com.brave.Browser
+Flatseal             com.github.tchx84.Flatseal
+OBS Studio           com.obsproject.Studio
+Cameractrls          hu.irl.cameractrls
+Mango Juice          io.github.radiolamp.mangojuice
+WiVRn server         io.github.wivrn.wivrn
+ProtonUp-Qt          net.davidotek.pupgui2
+Calculator           org.gnome.Calculator
 
 #####################
 ## DOCKER PACKAGES ## -> Check Q-Lnxcfg Winboat for more info

@@ -1,0 +1,21 @@
+###################
+## GAMES & UTILS ##
+###################
+
+  pacman -S steam sc-controller wayvr mangohud lib32-mangohud goverlay
+  pacman -S lact gamemode lib32-gamemode gamescope
+  yay -S vkBasalt lib32-vkBasalt
+  flatpak install flathub net.davidotek.pupgui2               #PROTONUP-QT
+  flatpak install flathub io.github.radiolamp.mangojuice      #MANGO JUICE
+  flatpak install flathub io.github.Faugus.faugus-launcher    #FAUGUST LAUNCHER
+  flatpak install flathub org.freedesktop.Platform.VulkanLayer.MangoHud # Enble Mangohub connection to Faugust in case Magohub is Grayout
+
+
+  #ADD USER TO GAMEMODE
+    sudo usermod -aG gamemode $USER
+
+    #Test gamemode
+     gamemoded -t
+
+#ADD LAUNCH OPTION IN STEAM GAMES
+  mangohud gamemoderun %command%
