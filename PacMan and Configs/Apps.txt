@@ -8,6 +8,8 @@
    #Run reflector to get closest repositories CO
     sudo reflector --latest 5 --country CO --protocol http,https --sort rate --save /etc/pacman.d/mirrorlist
 
+  # Manual of Commands
+  sudo pacman -S man-db man-pages
 #####################
 ## ULTIMATE BASHRC ## -> Check Q-Lnxcfg U_BASH for more info
 #####################
@@ -46,7 +48,6 @@
 
 
 Name                 Application ID
-Brave                com.brave.Browser
 Flatseal             com.github.tchx84.Flatseal
 OBS Studio           com.obsproject.Studio
 Cameractrls          hu.irl.cameractrls
@@ -69,6 +70,7 @@ Calculator           org.gnome.Calculator
 ##############
 
 yay -Syu
+yay -S brave-origin-bin
 yay -S topgrade-bin
 yay -S btop
 yay -S pipewire

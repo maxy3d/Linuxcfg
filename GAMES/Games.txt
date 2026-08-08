@@ -11,11 +11,31 @@
   flatpak install flathub org.freedesktop.Platform.VulkanLayer.MangoHud # Enble Mangohub connection to Faugust in case Magohub is Grayout
 
 
-  #ADD USER TO GAMEMODE
+#ADD USER TO GAMEMODE
     sudo usermod -aG gamemode $USER
 
-    #Test gamemode
+   #Test gamemode
      gamemoded -t
 
 #ADD LAUNCH OPTION IN STEAM GAMES
   mangohud gamemoderun %command%
+
+######################
+## TROUBLE SHOOTING ##
+######################
+
+# VRAM get P-State Stuck:
+  # -> Disable Monitor freesync in Monitor OSD
+
+  # Display Power WATTS of CPU AMD5800x ZEN3 in Mangohub
+  # requires replace module: Add ZenPower Module and remove k10temp
+
+  sudo pacman -Syu dkms linux-headers
+  yay -S zenpower3-dkms
+  sudo modprobe -r k10temp
+  sudo modprobe zenpower
+
+  #INCASE: to make it permanent after booting but in my case it did it automatic on install
+  echo "blacklist k10temp" | sudo tee /etc/modprobe.d/blacklist-k10temp.conf
+  echo "zenpower" | sudo tee /etc/modules-load.d/zenpower.conf
+
