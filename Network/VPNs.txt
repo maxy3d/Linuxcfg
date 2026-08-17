@@ -1,0 +1,46 @@
+#########################
+### Install Wireguard ###
+#########################
+
+sudo pacman -S wireguard-tools
+
+## use: create or copy config files ##
+# Save your provider or server configuration file into /etc/wireguard/wg0.conf.
+sudo nano /etc/wireguard/wg0.conf
+
+# Start the connection immediately:
+sudo wg-quick up wg0
+
+# Optional: Enable the systemd service to start the VPN automatically at boot:
+sudo systemctl enable wg-quick@wg0
+
+# Stop the connection using:
+sudo wg-quick down wg0
+
+
+###############################
+### Install CLI tool Vortix ###
+###############################
+
+sudo pacman -S vortix
+
+# Q-Note: Error recommend using resolvconf -u to fix network
+# Comment in wg0.conf file the DNSs
+
+# Other Problems
+sudo pacman -S openresolv
+
+# Resolvconf conflict created by networkManager and resolv editing file /etc/resolv.conf
+# Edit:
+sudo nano /etc/NetworkManager/NetworkManager.conf
+
+#add:
+[main]
+dns=none
+
+#Save and restart NetworkManager to disable DNS in resolv.con file:
+sudo systemctl restart NetworkManager
+
+# Delete old resolv.conf and Update resolv.conf
+sudo rm /etc/resolv.conf
+sudo resolvconf -u

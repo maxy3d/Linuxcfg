@@ -11,7 +11,7 @@
   # Manual of Commands
   sudo pacman -S man-db man-pages
 #####################
-## ULTIMATE BASHRC ## -> Check Q-Lnxcfg U_BASH for more info
+## ULTIMATE BASHRC ## -> Check Q-Lnxcfg SHELL -> BASH for more info
 #####################
    sudo pacman -S bash-completion, neovim, starship, fzf, zoxide, trash, tree
 

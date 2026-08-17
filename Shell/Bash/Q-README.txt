@@ -2,6 +2,7 @@
 #ULTIMATE BASHRC ( From Chris Titus)
    sudo pacman -Syu
    sudo pacman -S fastfetch bash-completion neovim starship fzf zoxide trash-cli tree less wget imagemagick
+   yay -S autojump
 
 #Download Q-Files
    wget -O ~/.bashrc https://raw.githubusercontent.com/maxy3d/Linuxcfg/refs/heads/main/U-Bash/.bashrc
